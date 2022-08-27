@@ -1,0 +1,42 @@
+form{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+form .form-entry{
+    width: 80%;
+    padding: 5px 0px;
+    color: var(--black1);
+    font-weight: 800;
+}
+
+form .form-entry label {
+    margin-right: 5px ;
+    
+}
+
+form .form-entry input{
+    border: 1px solid var(--black1);
+    border-radius: 10px;
+    width: 200px;
+    height: 25px;
+    margin: 5px 0px 10px 0px;
+    position: relative;
+
+}
+
+
+button {
+    width: 100px;
+    height: 35px;
+    background: var(--blue);
+    margin: 10px;
+    padding: 5px;
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transform: translate(50%, 10%);
+   }

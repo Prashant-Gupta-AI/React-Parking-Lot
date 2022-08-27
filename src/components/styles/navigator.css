@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+/* 
+:root{
+    --blue:#287bff;
+    --white:#fff;
+    --grey:#f5f5f5;
+    --black1:#222;
+    --black2:#999;
+} */
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.navigator-container{
+    position: relative;
+    width: 100%;
+   
+}
+
+.navigator{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigator.active{
+width: 80px;
+}
+
+.navigator ul{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+
+}
+
+.navigator ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+}
+
+.navigator ul li:hover,
+.navigator ul li.hovered
+{
+    background: var(--white);
+}
+
+.navigator ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigator ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navigator ul li:hover a,
+.navigator ul li.hovered a
+{
+    color: var(--blue);
+}
+
+.navigator ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navigator ul li a .icon ion-icon{
+    font-size: 1.75em;
+}
+
+.navigator ul li a .title{
+position: relative;
+display: block;
+padding: 0px 10px;
+height: 60px;
+line-height: 60px;
+text-align: start;
+white-space: normal;
+}
+
+/* curve outside */
+.navigator ul li:hover a::before,
+.navigator ul li.hovered a::before
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    top:-50px;
+    width: 50px;
+    height: 50px;
+    background:transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+.navigator ul li:hover a::after,
+.navigator ul li.hovered a::after
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom:-50px;
+    width: 50px;
+    height: 50px;
+    background:transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+@media (max-width:991px)
+{
+    .navigator
+    {
+        left:-300px;
+    }
+    
+    .navigator.active
+    {
+        width: 300px;
+        left:0;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .navigator
+    {
+        width: 100%;
+        left:-100%;
+        z-index: 1000;
+    }
+    
+    .navigator.active
+    {
+        width: 100%;
+        left:0;
+    }
+
+}

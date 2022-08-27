@@ -1,0 +1,144 @@
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 0px 30px;
+    align-items: start;
+}
+
+.details .recentOrders
+{
+    position: relative;
+    display: grid;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.1);
+    border-radius:20px ;
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.cardHeader h2{
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.bttn
+{
+    position: relative;
+    padding: 5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+
+}
+
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td{
+    font-weight: 800;
+}
+
+.details .recentOrders table tr{
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.details .recentOrders table tr:last-child{
+    border: none;
+}
+
+.details .recentOrders table tbody tr:hover{
+    background:var(--blue);
+    color: var(--white);
+}
+
+.details .recentOrders table tr td{
+    padding: 10px;
+}
+
+
+.details .recentOrders table tr td:last-child,
+.details .recentOrders table tr td:nth-child(2){
+    text-align: end;
+}
+
+.details .recentOrders table tr td:nth-child(3){
+    text-align: center;
+}
+
+.status.green{
+    padding: 2px 4px;
+    border-radius: 4px ;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+    background: rgb(58, 172, 58);
+}
+
+.status.yellow{
+    padding: 2px 4px;
+    border-radius: 4px ;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+    background: rgb(200, 211, 54);
+}
+
+.status.red{
+    padding: 2px 4px;
+    border-radius: 4px ;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+    background: rgb(223, 5, 5);
+}
+
+.status.blue{
+    padding: 2px 4px;
+    border-radius: 4px ;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+    background: rgb(14, 109, 216);
+}
+
+.newCustumers{
+    position: relative;
+    max-width: 300px;
+    display: inline;
+    padding: 20px;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0,0,0,0.1);
+    border-radius: 20px;
+}
+
+
+@media (max-width: 768px){
+    .details{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .recentOrders
+    {
+        overflow-x: auto;
+    }
+    .newCustumers
+    {
+        margin-top: 20px;
+    }
+    .status.inprogress
+    {
+        white-space: nowrap;
+    }
+}
